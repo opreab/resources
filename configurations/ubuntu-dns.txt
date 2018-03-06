@@ -1,0 +1,9 @@
+# add corporate dns and domains to systemd-resolve
+
+# edit /etc/systemd/resolved.conf 
+[Resolve]
+DNS=192.168.162.139 8.8.8.8
+Domains=dev.opsware.com qa.opsware.com
+
+# restart service
+service systemd-resolved restart
