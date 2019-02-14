@@ -2,7 +2,7 @@
 
 ```
 # Run binary with arguments
-gdb --args executablename arg1 arg2 arg3
+gdb --args <executablename> <args>
 
 # Set a breakpoint at entry to function function.
 break function
@@ -23,4 +23,13 @@ break filename:function
 
 # follow parent/child fork
 set follow-fork-mode [parent|child]
+```
+
+# GDBGUI
+```
+# install gdbgui
+pip install gdbgui
+
+# run a server on 0.0.0.0:5000 and suppress browser from opening
+gdbgui -r "<executablename> <args>"
 ```
