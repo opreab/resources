@@ -23,6 +23,9 @@ break filename:function
 
 # follow parent/child fork
 set follow-fork-mode [parent|child]
+
+# adding debug symbols from source and arguments for binary
+gdb `find <src dir> -type d -printf '-d %p '` --args <binary> <args>
 ```
 
 # GDBGUI
